@@ -19,7 +19,7 @@ One of the core strengths of this extension is its robust **multi-context archit
 ## Project Structure
 
 ```text
-ws-inspector/
+ws-interceptor/
 ├── manifest.json         # Manifest V3 configuration mapping content & main-world scripts
 ├── background.js        # Service Worker running the state engine, queue tracker, & lifecycle janitor
 ├── content.js           # Isolated-world content script proxying data and tracking DOM mutations
@@ -38,14 +38,14 @@ ws-inspector/
 4. State Management: background.js orchestrates whether messages should pass cleanly, stay paused in the modification queue, or trigger state updates inside the Side Panel UI (index.html).
 
 ## Installation
-1. Clone or download this repository to your local machine (ensure the folder is named cleanly, e.g., ws-inspector).
+1. Clone or download this repository to your local machine (ensure the folder is named cleanly, e.g., ws-interceptor).
 2. Open your Google Chrome browser and navigate to chrome://extensions/.
 3. Enable Developer mode via the toggle switch in the top-right corner.
 4. Click on the Load unpacked button in the top-left corner.
-5. Select the ws-inspector root directory containing the manifest.json file.
+5. Select the ws-interceptor root directory containing the manifest.json file.
 
 ## How to Use
-1. Click on the Extension icon in your toolbar to open the WebSocket Inspector Side Panel.
+1. Click on the Extension icon in your toolbar to open the WebSocket Interceptor Side Panel.
 2. Click the global toggle button to switch the application status to App: Enabled.
 3. Crucial: Refresh the webpage (or iframe container) you want to analyze. The extension hooks into WebSockets created after the tool is initialized.
 4. Select the desired active socket instance from the dropdown selection list.
