@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="assets/screenshot.png" alt="WS Interceptor Screenshot" width="450">
+</p>
+
 # WS Interceptor
 
 A lightweight, powerful Google Chrome Extension designed for real-time WebSocket traffic interception, inspection, and modification. It operates directly within the Chrome Side Panel, offering a clean developer-oriented interface to monitor and manipulate WebSocket frames on the fly.
