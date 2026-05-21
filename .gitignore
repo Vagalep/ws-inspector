@@ -1,0 +1,22 @@
+# IntelliJ IDEA
+.idea/
+*.iml
+*.iws
+*.ipr
+out/
+gen/
+
+# Operating System Files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Chrome Extension build / packaging artifacts
+*.zip
+*.crx
+*.pem
+
+# Local testing or environment caches
+.cache/
+.npm/
+node_modules/

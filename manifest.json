@@ -1,0 +1,41 @@
+{
+  "manifest_version": 3,
+  "name": "WS Interceptor",
+  "version": "1.0.0",
+  "description": "A lightweight developer tool for real-time WebSocket traffic interception, inspection, and modification.",
+  "permissions": [
+    "activeTab",
+    "scripting",
+    "sidePanel",
+    "webNavigation"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "run_at": "document_start",
+      "all_frames": true
+    },
+    {
+      "matches": ["<all_urls>"],
+      "js": ["ws-hook.js"],
+      "world": "MAIN",
+      "run_at": "document_start",
+      "all_frames": true
+    }
+  ],
+  "action": {
+    "default_title": "Open WebSocket Inspector"
+  },
+  "side_panel": {
+    "default_path": "index.html"
+  },
+  "icons": {
+    "16": "assets/icon.png",
+    "48": "assets/icon.png",
+    "128": "assets/icon.png"
+  }
+}
